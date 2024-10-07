@@ -1,0 +1,21 @@
+header,
+main,
+footer {
+  display: grid;
+  grid-template-columns: 1fr min(calc(100% - 2 * #{$side-padding-m}), 100%) 1fr;
+  > * {
+    grid-column: 2;
+    width: 100%;
+    max-width: $max-width-container;
+    margin-inline: auto;
+  }
+
+  // padding-top: $header-height-m;
+  // @media (width > $breakpoint-m) {
+  //   padding-top: $header-height;
+  // }
+}
+.full-bleed {
+  grid-column: 1 / -1;
+  max-width: none;
+}

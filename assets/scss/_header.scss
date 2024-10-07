@@ -1,0 +1,141 @@
+// Header
+body.sticky-header {
+  header {
+    background: $white;
+    .section {
+      .site-brand {
+        .logo {
+          a {
+            display: inline-block;
+            &:before {
+              content: '';
+              display: inline-block;
+              background: url('../images/logo-basketball-black.svg') no-repeat transparent;
+              background-size: contain;
+              top: 11px;
+              padding-left: $side-padding;
+              position: absolute;
+              width: 60px;
+              height: 60px;
+              z-index: 2;
+            }
+          }
+        }
+      }
+      .site-nav {
+        ul.menu {
+          li {
+            &:last-child {
+              a {
+                &:after {
+                  background: url('../images/icons/link-blue.svg') no-repeat transparent;
+                  background-size: contain;
+                }
+              }
+            }
+            a {
+              color: black;
+            }
+          }
+        }
+      }
+      .site-nav-mobile {
+        svg {
+          fill: black;
+        }
+      }
+    }
+  }
+}
+
+header {
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  min-height: $header-height-m;
+  @media (width > $breakpoint-m) {
+    min-height: $header-height;
+  }
+  .section {
+    position: relative;
+    min-height: $header-height-m;
+    @media (width > $breakpoint-m) {
+      min-height: $header-height;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    .site-brand {
+      .logo {
+        a {
+          display: inline-block;                  
+          img {
+            position: relative;
+            max-width: 60px;
+            top: 11px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      @media (max-width: ($breakpoint-t) ) {
+        display: none;
+      }
+      .menu-menu-container {
+        width: 100%;
+      }
+      ul.menu {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          display: block;
+          padding: 8px 20px;
+          &:last-child {
+            padding-right: 0;
+            a {
+              &:after {
+                content: '';
+                display: inline-flex;
+                background: url('../images/icons/link-white.svg') no-repeat transparent;
+                background-size: contain;
+                width: 11px;
+                height: 11px;
+                margin-left: 0.8rem;
+              }
+            }                        
+          }
+          a {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $white;
+
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: underline;
+              text-decoration-thickness: 1px;
+              text-underline-offset: 2px;
+            }
+          }
+        }
+      }
+    }
+    .site-nav-mobile {            
+      display: none;
+      @media (max-width: ($breakpoint-t) ) {
+        // TODO: Add mobile menu overlay
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}

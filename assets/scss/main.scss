@@ -1,0 +1,21 @@
+// Base
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_general.scss';
+@import '_layout-constraints';
+
+// Mixins
+@include typography;
+@include buttons;
+
+// Sections
+@import '_header.scss';
+@import '_sections.scss';
+@import '_footer.scss';
+
+// Pages
+// @import 'pages/_home.scss';
+
+// Plugin defaults
+// @import 'plugins/_wpforms.scss';
