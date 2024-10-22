@@ -12,7 +12,7 @@ while ( have_posts() ) :
 ?>
 
 <main>
-  <section class="full-bleed">
+  <section class="full-bleed pt-0 pb-0">
     <?php
       $alternativeTitleH1 = get_field('alternative_title_h1');
       $banner_image_desktop = get_field('banner_image_desktop');
@@ -51,21 +51,18 @@ while ( have_posts() ) :
   </section>
 
   <section>
-    inner content
-  </section>
-
-  <?php  
-/*
-  <section>
-    <div class="inner-section">
-      <div class="instagram-feed">
-        <h2>Instagram Recent Posts [test short_code]</h2>
-        <?php echo do_shortcode('[instagram_recent_posts]'); ?>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        col 1
+      </div>
+      <div>
+        col 2
+      </div>
+      <div>
+        col 3
       </div>
     </div>
   </section>
-*/
-?>
 
 </main>
 

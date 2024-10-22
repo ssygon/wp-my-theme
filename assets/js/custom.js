@@ -4,7 +4,7 @@ window.addEventListener('pageshow', (event) => {
     jQuery(document).ready(($) => {
         //console.log('initialised');
         
-        function initialiseCheckScrollPosition() {
+        const initialiseCheckScrollPosition = () => {
             const checkScrollPosition = () => {
                 let scrollPosition = $(window).scrollTop();
                 let offsetThreshold = 10;

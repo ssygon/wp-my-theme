@@ -53,7 +53,12 @@ add_action('wp_enqueue_scripts', 'enqueue_tailwind_css');
 
 // Custom javascript
 function custom_javascript() {
-    wp_enqueue_script('custom-javascript',  trailingslashit( get_stylesheet_directory_uri() ) . '/assets/js/custom.js', array() );
+    wp_enqueue_script(
+        'custom-javascript',
+        trailingslashit(get_stylesheet_directory_uri()) . '/assets/js/custom.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/assets/js/custom.js') // Use file modification time as version
+    );
 }
 add_action('wp_enqueue_scripts', 'custom_javascript');
 

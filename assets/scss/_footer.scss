@@ -1,0 +1,10 @@
+footer {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @media (width > $breakpoint-m) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
